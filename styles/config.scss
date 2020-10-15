@@ -1,3 +1,38 @@
 // Hér eiga að vera stillingar með scss breytum fyrir:
 // grid, max-width á síðu, transitions,
 // liti, margin-bottom gildi sem eru sameiginleg
+
+$font_family_1: 'Open Sans', helvetica, arial, sans-serif;
+$font_family_2: 'Montaga', Georgia, serif;
+$font_size_default: 16px;
+
+
+$displaytype: flex;
+$offset: 10px;
+$max_width: 1400px;
+$columns: 12;
+$gutter: 20px;
+$color: hsla(204, 75%, 75%, 0.25);
+$repeating-width: calc(100% / #{$columns});
+$column-width: calc((100% / #{$columns}) - #{$gutter});
+$background-width: calc(100% + #{$gutter});
+$background-columns: repeating-linear-gradient(
+  to right,
+  $color,
+  $color $column-width,
+  transparent $column-width,
+  transparent $repeating-width);
+
+$duration: 300ms;
+$transition: $duration ease-in-out;
+
+$color1: #eee;
+$color2: #ccc;
+$color3: #999;
+$color4: #222;
+$color5: #000;
+
+$margin-bottom: 2rem;
+
+
+
