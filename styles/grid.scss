@@ -1,5 +1,5 @@
 // Sækja config
-@import "config";
+@import 'config';
 
 // Hér skal nota scss @for til að ítra út klösum fyrir grid
 html {
@@ -7,72 +7,67 @@ html {
 }
 
 html::before {
-  content: '';
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  
-  margin-right: auto;
-  margin-left: auto;
-  
-  width: calc(100% - (2 * $offset));
-  max-width: $max_width;
-  min-height: 100vh;
   background-image: $background-columns;
   background-size: $background-width 100%;
-  z-index: 1000;
+  bottom: 0;
+  content: '';
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $maxwidth;
+  min-height: 100vh;
   pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: calc(100% - (2 * $offset));
+  z-index: 1000;
 }
 
 .grid {
-  max-width: $max_width;
   margin: 0 auto;
+  max-width: $maxwidth;
   overflow: hidden;
 }
 
 .row {
   display: $displaytype;
-  flex-wrap: wrap;   
+  flex-wrap: wrap;
   margin-left: -$offset;
   margin-right: -$offset;
 }
 
 .col {
-  padding-left: $offset; 
+  padding-left: $offset;
   padding-right: $offset;
   width: 100%;
 }
 
-
-@function col($n, $infix: "") {
-  @if ($infix !="") {
-    @return unquote(".col-#{$infix}-#{$n}");
+@function col($n, $infix: '') {
+  @if ($infix !='') {
+    @return unquote('.col-#{$infix}-#{$n}');
   }
 
-  @return unquote(".col-#{$n}");
+  @return unquote('.col-#{$n}');
 }
 
-
-@function offset($n, $infix: "") {
-  @if ($infix !="") {
-    @return unquote(".offset-col-#{$infix}-#{$n}");
+@function offset($n, $infix: '') {
+  @if ($infix !='') {
+    @return unquote('.offset-col-#{$infix}-#{$n}');
   }
 
-  @return unquote(".offset-col-#{$n}");
+  @return unquote('.offset-col-#{$n}');
 }
 
-@mixin cols($size, $infix: "", $offset: false, $limit: 0) {
+@mixin cols($size, $infix: '', $offset: false, $limit: 0) {
   $total: $size;
 
   @if $limit>0 {
-    $total: $limit
+    $total: $limit;
   }
 
   @for $i from 1 through $total {
-  @if not $offset {
+    @if not $offset {
       #{col($i, $infix)} {
         width: percentage($i / $size);
       }
@@ -87,7 +82,7 @@ html::before {
 }
 
 @include cols($columns);
-@include cols($columns, "", true, 3);
+@include cols($columns, '', true, 3);
 
 @media (max-width: 799px) {
   @include cols($columns, md);
@@ -98,5 +93,3 @@ html::before {
   @include cols($columns, sm);
   @include cols($columns, sm, true, 3);
 }
-
-

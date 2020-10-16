@@ -1,16 +1,14 @@
 // Sækja allt úr styles/
-@import  './styles/config.scss';
-@import './styles/grid.scss';
-@import './styles/global.scss';
-
-
+@import './styles/config';
+@import './styles/grid';
+@import './styles/global';
 
 main {
-    padding-left: $offset;
-    padding-right: $offset;
- 
+  padding-left: $offset;
+  padding-right: $offset;
 }
-@import './styles/header.scss';
-@import './styles/events.scss';
-@import './styles/books.scss';
-@import './styles/button.scss';
+
+@import './styles/header';
+@import './styles/events';
+@import './styles/books';
+@import './styles/button';

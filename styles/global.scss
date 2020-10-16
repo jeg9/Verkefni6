@@ -2,24 +2,34 @@
 // Allir stílar fyrir "global", þ.e.a.s. type selectorar, reset etc
 @import 'config';
 
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-size: 16px;
-    font-family: $font_family_1;
-    color: $color4;
-  }
-  
-  a {
-    color: $color4;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  h1, h2, h3, h4 {
-    font-family: $font_family_2;
-  }
-    
+body {
+  color: $color4;
+  font-family: $fontfamily1;
+  font-size: 16px;
+}
+
+a {
+  color: $color4;
+}
+
+h1 {
+  font-family: $fontfamily2;
+}
+
+h2 {
+  font-family: $fontfamily2;
+}
+
+h3 {
+  font-family: $fontfamily2;
+}
+
+h4 {
+  font-family: $fontfamily2;
+}

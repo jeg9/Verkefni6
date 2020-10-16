@@ -1,24 +1,23 @@
-@import "config";
+@import 'config';
+
 button {
-    background-color:$color4;
-    color:$color1;
-    border: 1px solid $color5;
-    border-radius: 5px;
-    padding: 0.5rem;
-    word-break: initial;
-  
-    transition:
-      color $transition,
-      background-color $transition;
-  }
-  
-  button:hover {
-    background-color: $color1;
-    color: $color4;
-  }
-  
-  button:active {
-    background-color:$color4;
-    color:$color1;
-    border: 1px solid $color5;
-  }
+  background-color: $color4;
+  border: 1px solid $color5;
+  border-radius: 5px;
+  color: $color1;
+  padding: 0.5rem;
+  transition: color $transition;
+  transition: background-color $transition;
+  word-break: initial;
+}
+
+button:hover {
+  background-color: $color1;
+  color: $color4;
+}
+
+button:active {
+  background-color: $color4;
+  border: 1px solid $color5;
+  color: $color1;
+}

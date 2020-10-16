@@ -8,7 +8,8 @@
     "browser-sync": "browser-sync start --server --files styles.css",
     "sass": "node-sass --source-map-embed styles.scss styles.css",
     "sass-watch": "node-sass --source-map-embed --watch styles.scss --recursive styles.css",
-    "lint": "stylelint styles.scss ./**/*.scss"
+    "lint": "stylelint styles.scss ./**/*.scss",
+    "fix-lint": "stylelint styles.scss ./**/*.scss --fix"
   },
   "author": "jeg9",
   "license": "ISC",
